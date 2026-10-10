@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f4f6f2" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#111713" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="data:," />
+    <title>Quran Clips — Privacy Policy</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap');
+
+      :root {
+        color-scheme: light dark;
+        --bg: #f4f6f2;
+        --paper: #ffffff;
+        --ink: #17211a;
+        --muted: #5c685f;
+        --line: #d9dfd9;
+        --accent: #176b4d;
+        --accent-soft: #dfede5;
+        --note: #edf3ef;
+        --shadow: 0 24px 70px rgba(25, 48, 34, 0.08);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #111713;
+          --paper: #18211b;
+          --ink: #edf3ee;
+          --muted: #b4c0b7;
+          --line: #344139;
+          --accent: #75c9a1;
+          --accent-soft: #223c30;
+          --note: #202d25;
+          --shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+        }
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "DM Sans", sans-serif;
+        font-size: 16px;
+        line-height: 1.72;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a { color: var(--accent); text-underline-offset: 3px; }
+      a:hover { text-decoration-thickness: 2px; }
+
+      .page {
+        width: min(1120px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 58px 0 72px;
+      }
+
+      .masthead {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 230px;
+        gap: 44px;
+        align-items: end;
+        padding: 20px 0 42px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .eyebrow {
+        margin: 0 0 14px;
+        color: var(--accent);
+        font-size: 0.77rem;
+        font-weight: 600;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0;
+        max-width: 760px;
+        font-family: "Libre Caslon Display", Georgia, serif;
+        font-size: clamp(2.8rem, 7vw, 5.7rem);
+        font-weight: 400;
+        line-height: 0.97;
+        letter-spacing: -0.045em;
+      }
+
+      .meta {
+        margin: 0 0 7px;
+        color: var(--muted);
+        font-size: 0.88rem;
+        line-height: 1.55;
+      }
+
+      .meta strong {
+        display: block;
+        margin-top: 3px;
+        color: var(--ink);
+        font-weight: 600;
+      }
+
+      .intro {
+        max-width: 790px;
+        margin: 34px 0 0;
+        font-size: 1.12rem;
+        line-height: 1.7;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: 230px minmax(0, 1fr);
+        gap: 44px;
+        align-items: start;
+        margin-top: 44px;
+      }
+
+      nav {
+        position: sticky;
+        top: 24px;
+        padding: 18px 0;
+        border-top: 2px solid var(--accent);
+        border-bottom: 1px solid var(--line);
+      }
+
+      nav p {
+        margin: 0 0 10px;
+        color: var(--muted);
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+
+      nav a {
+        display: block;
+        padding: 5px 0;
+        color: var(--ink);
+        font-size: 0.9rem;
+        text-decoration: none;
+      }
+
+      nav a:hover { color: var(--accent); }
+
+      article {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+        padding: clamp(28px, 5vw, 64px);
+      }
+
+      section + section {
+        margin-top: 42px;
+        padding-top: 38px;
+        border-top: 1px solid var(--line);
+      }
+
+      h2 {
+        margin: 0 0 14px;
+        font-family: "Libre Caslon Display", Georgia, serif;
+        font-size: clamp(1.65rem, 3vw, 2.15rem);
+        font-weight: 400;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+      }
+
+      p { margin: 0 0 15px; }
+      p:last-child { margin-bottom: 0; }
+      ul {
+        margin: 13px 0 0;
+        padding-left: 1.25rem;
+      }
+      li { margin: 8px 0; padding-left: 5px; }
+      li::marker { color: var(--accent); }
+
+      .summary {
+        margin-bottom: 42px;
+        padding: 24px 26px;
+        background: var(--note);
+        border-top: 3px solid var(--accent);
+      }
+      .summary strong { font-weight: 600; }
+
+      .contact {
+        margin-top: 17px;
+        padding: 18px 20px;
+        background: var(--accent-soft);
+        color: var(--ink);
+        font-weight: 500;
+      }
+
+      footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        margin-top: 30px;
+        padding-top: 24px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 0.82rem;
+      }
+
+      @media (max-width: 760px) {
+        .page { width: min(100% - 28px, 680px); padding: 26px 0 48px; }
+        .masthead { grid-template-columns: 1fr; gap: 24px; padding-bottom: 28px; }
+        .meta strong { display: inline; margin-left: 5px; }
+        .layout { grid-template-columns: 1fr; gap: 22px; margin-top: 32px; }
+        nav { position: static; padding: 14px 0; }
+        nav div { display: grid; grid-template-columns: 1fr 1fr; gap: 1px 18px; }
+        article { padding: 26px 21px; }
+        .summary { padding: 20px; }
+        footer { flex-direction: column; gap: 5px; }
+      }
+
+      @media (max-width: 420px) {
+        h1 { font-size: 2.65rem; }
+        nav div { grid-template-columns: 1fr; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+      }
+
+      @media print {
+        body { background: #fff; color: #000; font-size: 11pt; }
+        .page { width: 100%; padding: 0; }
+        .layout { display: block; }
+        nav { display: none; }
+        article { border: 0; box-shadow: none; padding: 24px 0 0; }
+        section + section { break-inside: avoid; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="masthead">
+        <div>
+          <p class="eyebrow">Legal information</p>
+          <h1>Privacy Policy</h1>
+        </div>
+        <p class="meta">Effective date<strong>October 10, 2026</strong></p>
+      </header>
+
+      <p class="intro">
+        This Privacy Policy explains how Quran Clips handles information when you connect a TikTok account and use the app to prepare or publish Quran recitation videos.
+      </p>
+
+      <div class="layout">
+        <nav aria-label="Policy sections">
+          <p>On this page</p>
+          <div>
+            <a href="#information">Information we process</a>
+            <a href="#use">How we use it</a>
+            <a href="#sharing">Sharing</a>
+            <a href="#retention">Retention and security</a>
+            <a href="#choices">Your choices</a>
+            <a href="#children">Children</a>
+            <a href="#changes">Policy changes</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </nav>
+
+        <article>
+          <div class="summary">
+            <strong>In brief:</strong> Quran Clips uses the TikTok connection only to provide the features you request, such as accessing basic account details and uploading or publishing videos. It does not sell personal information.
+          </div>
+
+          <section id="information">
+            <h2>1. Information we process</h2>
+            <p>Depending on the permissions you approve through TikTok, Quran Clips may process:</p>
+            <ul>
+              <li><strong>Basic TikTok account information</strong>, such as your display name, username, profile image, and TikTok user identifier.</li>
+              <li><strong>Authorization information</strong>, including access tokens and the permissions you grant, so the app can connect to TikTok on your behalf.</li>
+              <li><strong>Content you choose to use</strong>, including video files, captions, and publishing settings that you provide for upload or publication.</li>
+              <li><strong>Technical information</strong> needed to operate and protect the service, such as error details, device or browser type, and basic usage records.</li>
+            </ul>
+            <p>Quran Clips does not ask for your TikTok password. TikTok handles sign-in and permission approval directly.</p>
+          </section>
+
+          <section id="use">
+            <h2>2. How we use information</h2>
+            <p>Information is used only as reasonably necessary to:</p>
+            <ul>
+              <li>connect your TikTok account after you give permission;</li>
+              <li>prepare, upload, or publish content you select;</li>
+              <li>show account and publishing status;</li>
+              <li>maintain, troubleshoot, and secure the app; and</li>
+              <li>comply with applicable law and platform requirements.</li>
+            </ul>
+            <p>Quran Clips does not use your information for targeted advertising and does not sell or rent your personal information.</p>
+          </section>
+
+          <section id="sharing">
+            <h2>3. When information is shared</h2>
+            <p>Information may be shared only in the following limited circumstances:</p>
+            <ul>
+              <li><strong>With TikTok</strong>, when you direct the app to upload or publish content, subject to TikTok’s own terms and privacy practices.</li>
+              <li><strong>With service providers</strong>, if needed to host, secure, or operate the app, and only for those purposes.</li>
+              <li><strong>For legal or safety reasons</strong>, when disclosure is required by law or reasonably necessary to protect rights, security, and users.</li>
+            </ul>
+          </section>
+
+          <section id="retention">
+            <h2>4. Retention and security</h2>
+            <p>Information is kept only for as long as needed to provide the requested features, maintain security, meet legal obligations, and resolve disputes. Content prepared for a requested upload or publication may be removed after processing when it is no longer required.</p>
+            <p>Reasonable administrative and technical safeguards are used to protect information. However, no internet transmission or storage method can be guaranteed to be completely secure.</p>
+          </section>
+
+          <section id="choices">
+            <h2>5. Your choices and rights</h2>
+            <p>You may disconnect Quran Clips from TikTok at any time through your TikTok account settings. After access is revoked, the app can no longer use the revoked TikTok permissions.</p>
+            <p>You may also request access to, correction of, or deletion of personal information associated with your use of Quran Clips. A request may require reasonable verification to protect your account and information. Some information may be retained when required by law or for legitimate security and recordkeeping purposes.</p>
+          </section>
+
+          <section id="children">
+            <h2>6. Children’s privacy</h2>
+            <p>Quran Clips is not directed to children under 13, or to anyone below the minimum age required to use TikTok in their location. The app does not knowingly collect personal information from children in violation of applicable law.</p>
+          </section>
+
+          <section id="changes">
+            <h2>7. Changes to this policy</h2>
+            <p>This Privacy Policy may be updated when the app, legal requirements, or platform rules change. The effective date at the top of this page will be revised when an update is published.</p>
+          </section>
+
+          <section id="contact">
+            <h2>8. Contact</h2>
+            <p>For questions about this Privacy Policy, privacy rights, or data-deletion requests:</p>
+            <p class="contact">Contact the Quran Clips administrator through the contact method provided with the app.</p>
+          </section>
+        </article>
+      </div>
+
+      <footer>
+        <span>Quran Clips</span>
+        <span>Privacy Policy · Effective October 10, 2026</span>
+      </footer>
+    </main>
+  </body>
+</html>
