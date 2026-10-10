@@ -1,0 +1,58 @@
+<!doctype html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quran Clips — ربط TikTok</title>
+</head>
+<body style="font-family:sans-serif;max-width:600px;margin:40px auto;padding:0 20px;text-align:center">
+<h2>🔗 ربط TikTok بتطبيق Quran Clips</h2>
+<div id="box"><p>جاري التحميل...</p></div>
+<script>
+var q = new URLSearchParams(location.search);
+var code = q.get('code'), err = q.get('error');
+var box = document.getElementById('box');
+var REDIRECT = 'https://soufianeettayfi-svg.github.io/corankaim/callback.html';
+
+function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;'); }
+
+if (err) {
+  box.innerHTML = '<p style="color:red">❌ فشل التفويض: ' + esc(q.get('error_description') || err) + '</p>';
+} else if (code) {
+  box.innerHTML =
+    '<p>✅ تم التفويض بنجاح!</p>' +
+    '<p>أدخل <b>Client Key</b> و <b>Client Secret</b> (مرة واحدة) لإتمام الربط:</p>' +
+    '<form method="POST" action="https://open.tiktokapis.com/v2/oauth/token/">' +
+    '<input type="hidden" name="code" value="' + esc(code) + '">' +
+    '<input type="hidden" name="grant_type" value="authorization_code">' +
+    '<input type="hidden" name="redirect_uri" value="' + REDIRECT + '">' +
+    '<input type="text" name="client_key" placeholder="Client Key" required ' +
+    'style="padding:10px;width:90%;font-size:16px;margin-bottom:10px"><br>' +
+    '<input type="password" name="client_secret" placeholder="Client Secret" required ' +
+    'style="padding:10px;width:90%;font-size:16px;margin-bottom:10px"><br>' +
+    '<button type="submit" style="padding:12px 40px;font-size:16px;cursor:pointer">إتمام الربط ✅</button>' +
+    '</form>' +
+    '<p><small>البيانات تُرسل مباشرة إلى TikTok. الصفحة الناتجة فيها رموز الربط — انسخها كاملة وأرسلها في الشات.</small></p>';
+} else {
+  box.innerHTML =
+    '<p>الخطوة 1: أدخل <b>Client Key</b> ديالك (من بوابة مطور TikTok):</p>' +
+    '<input id="ck" type="text" placeholder="Client Key" ' +
+    'style="padding:10px;width:90%;font-size:16px;margin-bottom:10px"><br>' +
+    '<button onclick="go()" style="padding:12px 40px;font-size:16px;cursor:pointer">المتابعة إلى TikTok ←</button>' +
+    '<p><small>غادي تتحول لتيكتوك: سجل الدخول وكليكي Authorize</small></p>';
+}
+function go(){
+  var ck = document.getElementById('ck').value.trim();
+  if(!ck){ alert('دخل الـ Client Key'); return; }
+  var state = Math.random().toString(36).slice(2);
+  var url = 'https://www.tiktok.com/v2/auth/authorize/?' +
+    'client_key=' + encodeURIComponent(ck) +
+    '&scope=' + encodeURIComponent('user.info.basic,video.upload,video.publish') +
+    '&response_type=code' +
+    '&redirect_uri=' + encodeURIComponent(REDIRECT) +
+    '&state=' + encodeURIComponent(state);
+  location.href = url;
+}
+</script>
+</body>
+</html>
